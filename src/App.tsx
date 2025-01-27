@@ -1,7 +1,7 @@
 
 import DashBoard from "./pages/organizationDashboard"
 
-function App() {
+const App:React.FC = ()=> {
   
   return (
     <>

@@ -16,18 +16,21 @@ export const sidebarItems = [
       category: "Businesses",
       items: [
         { id: 9, name: "Organization", path: "/organizations", image:"./icons/briefcase.png" },
-        { id: 6, name: "Loan Products", path: "/loan-products", image:"./icons/loan.png" },
-        { id: 7, name: "Savings Products", path: "/savings-products", image:"./icons/" },
-        { id: 8, name: "Fees and Charges", path: "/fees-charges" , image:"./icons/"},
+        { id: 10, name: "Loan Products", path: "/loan-products", image:"./icons/loan.png" },
+        { id: 11, name: "Savings Products", path: "/savings-products", image:"./icons/bank.png" },
+        { id: 12, name: "Fees and Charges", path: "/fees-charges" , image:"./icons/coins.png"},
+        { id: 13, name: "Transaction", path: "/transactions" , image:"./icons/transaction.png"},
+        { id: 14, name: "Services", path: "/services" , image:"./icons/services.png"},
+        { id: 15, name: "Service Account", path: "service account" , image:"./icons/coins.png"},
       ],
     },
     {
       category: "Settings",
       items: [
-        { id: 9, name: "Preferences", path: "/preferences" , image:"./icons/"},
-        { id: 10, name: "Fees and Pricing", path: "/fees-pricing" , image:"./icons/"},
-        { id: 11, name: "Audit Logs", path: "/audit-logs" , image:"./icons/"},
-        { id: 11, name: "Systems Messages", path: "/systems-messages" , image:"./icons/"}
+        { id: 16, name: "Preferences", path: "/preferences" , image:"./icons/preference.png"},
+        { id: 17, name: "Fees and Pricing", path: "/fees-pricing" , image:"./icons/pricing.png"},
+        { id: 18, name: "Audit Logs", path: "/audit-logs" , image:"./icons/audit.png"},
+       
       ],
     },
   ];

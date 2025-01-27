@@ -4,7 +4,6 @@ const NavBar = () => {
     <>
       <nav className="Nav">
         <a href="/"><img className="Nav-logo" src="/logo.png" alt="logo" /></a>
-
         <form action="" method="post">
           <input type="text" placeholder="Search for anything" />
           <button>

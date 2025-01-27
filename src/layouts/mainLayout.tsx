@@ -1,13 +1,17 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/navBar";
 import SideBar from "../components/sideBar";
-const MainLayout = () => {
+const MainLayout:React.FC = () => {
   return (
     <>
-        <NavBar/>
-        <SideBar/>
+    <NavBar />
+    <div className="app-layout">
+      <SideBar />
+      <div className="main-content">
         <Outlet />
-    </>
+      </div>
+    </div>
+  </>
   )
 }
 
