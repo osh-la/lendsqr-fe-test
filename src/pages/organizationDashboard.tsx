@@ -2,7 +2,7 @@ import {Route,
   createBrowserRouter, 
   createRoutesFromElements, 
   RouterProvider} from 'react-router-dom';
-   import MainLayout from '../layouts/mainLayOut';
+   import MainLayout from '../layouts/mainLayout';
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<MainLayout/>}>
