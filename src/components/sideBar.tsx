@@ -7,11 +7,12 @@ const Sidebar: React.FC = () => {
     <aside className='sidebar'>
       <div className="sidebar-top">
         <div className="sidebar-top-a">
-          <img src="/icons/briefcase.png" alt="" />
+          <img src="/icons/sidebar/briefcase.png" alt="" />
           <a href="">Switch Organization</a>
+          <img className="dropdown "src="/icons/dropdown.png" alt="" />
         </div>
         <div className="sidebar-top-a">
-          <img src="/icons/home.png" alt="" />
+          <img src="/icons/sidebar/home.png" alt="" />
           <p>Dashboard</p>
         </div>
       </div>

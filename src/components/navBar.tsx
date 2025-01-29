@@ -7,15 +7,16 @@ const NavBar = () => {
         <form action="" method="post">
           <input type="text" placeholder="Search for anything" />
           <button>
-            <img src="/icons/search.svg" alt="" />
+            <img src="/icons/search.png" alt="search" />
           </button>
         </form>
         <div className="Nav-docs-profile">
           <a href="/">Docs</a>
-          <button><img src="/icons/bell.png" alt="" /></button>
+          <button><img src="/icons/bell.png" alt="bell" /></button>
           <a className="profile">
-            <img src="/profile.jpg" alt="" />
+            <img className="profile-pic" src="/profile.jpg" alt="profile" />
             <p>Oshela abimiku</p>
+            <img className="dropdown" src="/icons/dropdown.png" alt="" />
             <span></span>
           </a>
         </div>

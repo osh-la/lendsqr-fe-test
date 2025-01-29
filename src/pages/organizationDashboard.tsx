@@ -4,10 +4,11 @@ import {Route,
   RouterProvider} from 'react-router-dom';
    import MainLayout from '../layouts/mainLayout';
    import Users from '../components/users';
+   import UserDetails from '../components/user';
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<MainLayout/>}>
-        <Route index element={<Users/>}/>
+        <Route index element={<UserDetails/>}/>
       </Route>
     )
   )

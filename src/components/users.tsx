@@ -1,4 +1,5 @@
-const UserDashboard = () => {
+
+const UserDashboard:React.FC = () => {
   const users = [
     {
       organization: "Lendsqr",
@@ -24,25 +25,35 @@ const UserDashboard = () => {
       dateJoined: "Apr 29, 2023 12:00 PM",
       status: "Active",
     },
+    {
+      organization: "Lendsqr",
+      username: "Grace Effiom",
+      email: "grace.effiom@gmail.com",
+      phoneNumber: "07089338258",
+      dateJoined: "Apr 29, 2023 12:00 PM",
+      status: "blacklisted",
+    },
   ];
 
   return (
     <div className="dashboard">
+      <h1>Users</h1>
       <div className="dashboard__stats">
         {[
-          { label: "USERS", count: 2453 },
-          { label: "ACTIVE USERS", count: 2453 },
-          { label: "USERS WITH LOANS", count: 12453 },
-          { label: "USERS WITH SAVINGS", count: 102453 },
+          { label: "USERS", count: 2453,image:"/icons/users/users1.png"},
+          { label: "ACTIVE USERS", count: 2453,image:"/icons/users/users2.png"},
+          { label: "USERS WITH LOANS", count: 12453,image:"/icons/users/audit.png"},
+          { label: "USERS WITH SAVINGS", count: 102453,image:"/icons/users/coins1.png"},
         ].map((stat) => (
           <div key={stat.label} className="stat">
+            <div className="stat-img-container">
+            <img src={stat.image} alt="" className="users-img" />
+            </div>
             <p className="stat__label">{stat.label}</p>
             <p className="stat__count">{stat.count}</p>
           </div>
         ))}
       </div>
-
-      
       <div className="dashboard__table">
         <table>
           <thead>
