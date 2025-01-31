@@ -4,7 +4,7 @@ import SideBar from "../components/sideBar";
 const MainLayout:React.FC = () => {
   return (
     <>
-    <NavBar />
+      <NavBar />
     <div className="app-layout">
       <SideBar />
       <div className="main-content">

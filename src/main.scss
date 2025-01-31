@@ -9,6 +9,9 @@ body {
   color: $dark-blue;
   font-size: large;
 }
+Link{
+  text-decoration: none;
+}
 // login
 .Login-body {
   display: flex;
@@ -117,37 +120,37 @@ body {
     }
   }
 }
-
-// Layout Styling
-.app-layout {
-  display: flex;
-
-  .sidebar {
-    background-color: #ffffff;
-    border-right: 1px solid #e6e6e6;
-  }
-
-  .main-content {
-    background-color: rgb(240, 240, 240);
-    flex: 1;
-  }
-}
 // nav
 .Nav {
+  width: 100%;
+  height: 130px;
+  background-color: white;
+  position:fixed;
+  top: 0;
   color: $dark-blue;
   display: flex;
-  padding: 20px;
+  padding: 0 50px;
+  z-index: 1000;
+  align-items: center;
   justify-content: space-between;
-  box-shadow: 0 1px 1px rgb(245, 242, 242);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-  & input {
+  & input { 
+    border: 0.5px solid rgb(221, 219, 219);
     border-start-start-radius: 5px;
     border-bottom-left-radius: 5px;
     font-size: larger;
-    width: 340px;
-    padding: 15px 15px;
+    width: 400px;
+    padding: 13px 15px;
+    &:focus{
+      outline: none;
+    }
   }
   & form button {
+    width: 70px;
+    height: inherit;
+    cursor: pointer;
+    border: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 15px 0;
@@ -157,8 +160,7 @@ body {
     & img {
       color: white;
       background-position: cover;
-      width: 40px;
-      height: 15px;
+
     }
   }
 }
@@ -194,6 +196,22 @@ body {
   width: 30px;
   height: 30px;
 }
+// Layout Styling
+.app-layout {
+  margin-top:130px;
+  display: flex;
+
+  .sidebar {
+    background-color: #ffffff;
+    border-right: 1px solid #e6e6e6;
+  }
+
+  .main-content {
+    background-color: rgb(248, 246, 246);
+    flex: 1;
+  }
+}
+
 //sidebar
 .sidebar {
   
@@ -206,9 +224,12 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size:large;
+    font-size:larger;
     margin-bottom: 1rem;
     & a {
+      font-size: larger;
+      font-weight:normal;
+      color: $dark-blue;
       text-decoration: none;
     }
     & img {
@@ -383,17 +404,19 @@ body {
 }
 .user-details-container {
   .header {
+    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 2rem;
     .actions {
       button {
+        font-size: larger;
         margin-left: 10px;
-        border-radius: 5px;
+        border: 1.5px solid;
         border-radius: 5px;
         background: none;
-        padding: 10px 20px;
+        padding: 10px 30px;
       }
 
       .blacklist {
@@ -402,8 +425,8 @@ body {
       }
 
       .activate {
-        border-color: green;
-        color: green;
+        border-color: $light-blue;
+        color: $light-blue;
       }
     }
   }

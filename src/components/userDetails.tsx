@@ -1,5 +1,27 @@
-
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 const UserDetails: React.FC = () => {
+  const { id } = useParams(); // Get user ID from URL
+  const [userData, setUserData] = useState(null);
+  const [categoryData, setCategoryData] = useState(null);
+  const [activeCategory, setActiveCategory] = useState("general"); // Default category
+
+  // Fetch user general details by default
+  useEffect(() => {
+    fetch(`https://api.example.com/users/${id}`)
+      .then(response => response.json())
+      .then(data => setUserData(data))
+      .catch(error => console.error("Error fetching user details:", error));
+  }, [id]);
+
+  // Function to fetch category-specific data
+  const fetchCategoryData = (category) => {
+    setActiveCategory(category); // Set active category
+    fetch(`https://api.example.com/users/${id}/${category}`)
+      .then(response => response.json())
+      .then(data => setCategoryData(data))
+      .catch(error => console.error(`Error fetching ${category} data:`, error));
+  };
   return (
     <section className="user-section">
       <a href="/"> Back to Users</a>
