@@ -1,5 +1,6 @@
 
-import DashBoard from "./pages/organizationDashboard"
+import DashBoard from "./pages/organizationDashboard";
+import Login from "./pages/login";
 
 const App:React.FC = ()=> {
   

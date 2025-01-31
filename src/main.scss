@@ -1,5 +1,5 @@
 $light-blue: rgb(49, 211, 203);
-$dark-blue: rgb(28, 30, 114);
+$dark-blue: rgba(33, 63, 125, 0.7);
 
 body {
   margin: 0;
@@ -7,9 +7,10 @@ body {
   background-color: white;
   height: 100vh;
   color: $dark-blue;
+  font-size: large;
 }
 // login
-.Login-body{
+.Login-body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,107 +121,107 @@ body {
 // Layout Styling
 .app-layout {
   display: flex;
-  height: 100vh; 
 
   .sidebar {
-    background-color: #ffffff; 
-    border-right: 1px solid #e6e6e6; 
+    background-color: #ffffff;
+    border-right: 1px solid #e6e6e6;
   }
 
   .main-content {
+    background-color: rgb(240, 240, 240);
     flex: 1;
-    padding: 1rem; 
-    overflow-y: auto; 
   }
 }
 // nav
-.Nav{
+.Nav {
+  color: $dark-blue;
   display: flex;
   padding: 20px;
   justify-content: space-between;
   box-shadow: 0 1px 1px rgb(245, 242, 242);
 
-  & input{
+  & input {
     border-start-start-radius: 5px;
     border-bottom-left-radius: 5px;
     font-size: larger;
     width: 340px;
-    padding:15px 15px;
-   }
-   & form button{
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      padding: 15px 0;
-      background-color: $light-blue;
-      
-      font-size: larger;
-      & img{
-        color: white;
-        background-position: cover;
-        width: 40px;
-        height: 15px;
-      }
-   }
+    padding: 15px 15px;
+  }
+  & form button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 15px 0;
+    background-color: $light-blue;
+
+    font-size: larger;
+    & img {
+      color: white;
+      background-position: cover;
+      width: 40px;
+      height: 15px;
+    }
+  }
 }
-.Nav-logo{
+.Nav-logo {
   width: 200px;
 }
-.Nav-docs-profile{
+.Nav-docs-profile {
   display: flex;
   gap: 1rem;
   align-items: center;
-  
-  & button{
+
+  & button {
     background: none;
     border: none;
-    & img{
+    & img {
       width: 30px;
       height: 30px;
     }
   }
 }
-.profile{
+.profile {
   display: flex;
-  gap:1rem;
+  gap: 1rem;
   align-items: center;
-  & .profile-pic{
+  & .profile-pic {
     width: 50px;
-    height: 50px;   
+    height: 50px;
     border-radius: 80px;
     position: center;
   }
 }
-.dropdown{
+.dropdown {
   width: 30px;
   height: 30px;
 }
 //sidebar
 .sidebar {
+  
+  color: $dark-blue;
   width: 20%;
   margin-top: 4px;
   background-color: white;
   padding: 2rem;
-.sidebar-top-a{
-  display: flex;
-  align-items: center;
-   gap: 0.5rem;
-  margin-bottom: 1rem;
-  & a{
-    text-decoration: none;
+  .sidebar-top-a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size:large;
+    margin-bottom: 1rem;
+    & a {
+      text-decoration: none;
+    }
+    & img {
+      width: 20px;
+      height: 20px;
+    }
   }
-  & img{
-    width: 20px;
-    height: 20px;
-  }
-
-}
   .section {
     margin-bottom: 2rem;
 
     .category {
-      font-size: 1.2rem;
       font-weight: bold;
-      color: #333;
+      color: $dark-blue;
       margin-bottom: 0.5rem;
     }
 
@@ -229,21 +230,22 @@ body {
       padding: 0;
 
       .menuItem {
-        display:flex;
+        display: flex;
         align-items: center;
         gap: 0.5rem;
         margin-bottom: 1rem;
-        & img{
+        & img {
           width: 20px;
           height: 20px;
         }
 
         a {
+          margin: 10px 0;
           text-decoration: none;
-          color: #555;
-          font-size: 1rem;
+          color: $dark-blue;
 
           &:hover {
+          
             color: #1a73e8;
           }
         }
@@ -255,7 +257,6 @@ body {
 //users
 .dashboard {
   padding: 2rem;
-  background-color: #f9fafb;
   font-family: Arial, sans-serif;
   min-height: 100vh;
 
@@ -270,7 +271,6 @@ body {
       font-weight: bold;
       color: #333;
     }
-
   }
 
   &__stats {
@@ -293,7 +293,7 @@ body {
       th {
         text-align: left;
         padding: 0.75rem;
-        color: #333;
+        color: $dark-blue;
         font-weight: bold;
         font-size: 0.9rem;
       }
@@ -301,7 +301,7 @@ body {
       td {
         padding: 2rem;
         border-bottom: 1px solid #e5e7eb;
-        color: #555;
+        color: $dark-blue;
       }
 
       tr:last-child td {
@@ -352,8 +352,7 @@ body {
   text-align: start;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  &__label
-   {
+  &__label {
     font-size: 0.9rem;
     color: #6b7280;
     margin-bottom: 0.5rem;
@@ -364,67 +363,72 @@ body {
     font-weight: bold;
     color: #111827;
   }
-  .stat-img-container{
+  .stat-img-container {
     padding: 10px;
-    width:max-content;
+    width: max-content;
     background-color: rgb(248, 243, 243);
     border-radius: 40px;
   }
-  & img{
+  & img {
     width: 40px;
     height: 40px;
   }
 }
-// users
-.user-details-container {
-  
+// user
+.user-section {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
   margin: auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+  width: 95%;
+}
+.user-details-container {
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-
+    padding-bottom: 2rem;
     .actions {
       button {
         margin-left: 10px;
-        padding: 8px 15px;
         border-radius: 5px;
-        cursor: pointer;
-        border: none;
+        border-radius: 5px;
+        background: none;
+        padding: 10px 20px;
       }
 
       .blacklist {
-        background: red;
-        color: white;
+        border-color: red;
+        color: red;
       }
 
       .activate {
-        background: green;
-        color: white;
+        border-color: green;
+        color: green;
       }
     }
   }
-
+  .user-profile {
+    background-color: white;
+    border-radius:5px;
+    padding: 2rem;
+  }
   .profile {
     display: flex;
     align-items: center;
     padding: 20px 0;
 
     .profile-icon {
-      font-size: 60px;
-      color: #ccc;
+      width: 150px;
+      height: 150px;
+      border-radius: 150px;
     }
 
     .info {
-      margin-left: 15px;
-
+      text-align: start;
+      padding: 0 20px;
+      &.border-right {
+        border-right: 0.5px solid gray;
+      }
       h3 {
         margin: 0;
         font-size: 22px;
@@ -439,39 +443,48 @@ body {
 
   .tabs {
     display: flex;
-    border-bottom: 2px solid #ddd;
-
+    justify-content: space-between;
+    width: 100%;
     button {
+      color: gray;
       padding: 10px 15px;
       border: none;
       background: none;
       cursor: pointer;
-      font-size: 14px;
+      font-size:large;
+      &:hover {
+        color: $light-blue;
+        font: bold;
+        border-bottom: 3px solid lightblue;
+      }
     }
 
     .active {
       font-weight: bold;
-      border-bottom: 3px solid blue;
+      border-bottom: 3px solid $light-blue;
     }
   }
 
   .details {
+    padding: 2rem;
+    background-color: white;
     margin-top: 20px;
-
-    h4 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-    }
+    border-radius: 5px;
 
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 10px;
-      padding: 10px 0;
-
+      padding: 5px 0;
+      border-bottom: 2px solid rgb(231, 227, 227);
+      &:last-child {
+        border: none;
+      }
       div {
-        background: #f9f9f9;
-        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
         border-radius: 5px;
       }
     }
